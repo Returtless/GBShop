@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		25E05CB2CF55522494892BE6 /* Pods_GBShop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D7F1BFD3E24F534F19BEA0A4 /* Pods_GBShop.framework */; };
 		52CD90AA2566FA66002C997D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CD90A92566FA66002C997D /* AppDelegate.swift */; };
 		52CD90AC2566FA66002C997D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52CD90AB2566FA66002C997D /* SceneDelegate.swift */; };
 		52CD90B32566FA68002C997D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52CD90B22566FA68002C997D /* Assets.xcassets */; };
@@ -20,6 +21,9 @@
 		52CD90B22566FA68002C997D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		52CD90B52566FA68002C997D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		52CD90B72566FA68002C997D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		77568308DDF0D286088B0470 /* Pods-GBShop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GBShop.release.xcconfig"; path = "Target Support Files/Pods-GBShop/Pods-GBShop.release.xcconfig"; sourceTree = "<group>"; };
+		83BF25F8F6737EF4D3028EAD /* Pods-GBShop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GBShop.debug.xcconfig"; path = "Target Support Files/Pods-GBShop/Pods-GBShop.debug.xcconfig"; sourceTree = "<group>"; };
+		D7F1BFD3E24F534F19BEA0A4 /* Pods_GBShop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GBShop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +31,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				25E05CB2CF55522494892BE6 /* Pods_GBShop.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -38,6 +43,8 @@
 			children = (
 				52CD90A82566FA66002C997D /* GBShop */,
 				52CD90A72566FA66002C997D /* Products */,
+				F46715926B38CAAFCDEA3771 /* Pods */,
+				BEE1B1E3533BBCAE615AA0F3 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -117,6 +124,24 @@
 			path = API;
 			sourceTree = "<group>";
 		};
+		BEE1B1E3533BBCAE615AA0F3 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				D7F1BFD3E24F534F19BEA0A4 /* Pods_GBShop.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F46715926B38CAAFCDEA3771 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				83BF25F8F6737EF4D3028EAD /* Pods-GBShop.debug.xcconfig */,
+				77568308DDF0D286088B0470 /* Pods-GBShop.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -124,9 +149,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 52CD90BA2566FA68002C997D /* Build configuration list for PBXNativeTarget "GBShop" */;
 			buildPhases = (
+				6A297ECB2FC90D500E97D83F /* [CP] Check Pods Manifest.lock */,
 				52CD90A22566FA66002C997D /* Sources */,
 				52CD90A32566FA66002C997D /* Frameworks */,
 				52CD90A42566FA66002C997D /* Resources */,
+				B95291D9F1A283884A4333BD /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -180,6 +207,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6A297ECB2FC90D500E97D83F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GBShop-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B95291D9F1A283884A4333BD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GBShop/Pods-GBShop-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GBShop/Pods-GBShop-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GBShop/Pods-GBShop-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		52CD90A22566FA66002C997D /* Sources */ = {
@@ -323,6 +392,7 @@
 		};
 		52CD90BB2566FA68002C997D /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 83BF25F8F6737EF4D3028EAD /* Pods-GBShop.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -342,6 +412,7 @@
 		};
 		52CD90BC2566FA68002C997D /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 77568308DDF0D286088B0470 /* Pods-GBShop.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
