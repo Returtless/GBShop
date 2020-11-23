@@ -11,3 +11,8 @@ struct LoginResult: Codable {
     let result: Int
     let user: User
 }
+
+struct RegisterResult: Codable {
+    let result: Int
+    let userMessage: String
+}
