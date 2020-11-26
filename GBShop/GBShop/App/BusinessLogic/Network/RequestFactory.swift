@@ -33,4 +33,14 @@ class RequestFactory {
         let errorParser = makeErrorParser()
         return Register(errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
     }
+    
+    func makeLogoutRequestFatory() -> LogoutRequestFactory {
+        let errorParser = makeErrorParser()
+        return Logout(errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
+    }
+    
+    func makeChangeDataRequestFatory() -> ChangeDataRequestFactory {
+        let errorParser = makeErrorParser()
+        return ChangeData(errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
+    }
 }
