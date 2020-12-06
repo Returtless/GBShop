@@ -7,16 +7,16 @@
 
 import Foundation
 
-struct LoginResult: Codable {
+struct StandardResult: Codable {
     let result: Int
-    let user: User
 }
 
 struct RegisterResult: Codable {
     let result: Int
     let userMessage: String
-}
-
-struct LogoutResult: Codable {
-    let result: Int
+    
+    enum CodingKeys: String, CodingKey {
+        case result
+        case userMessage = "user_message"
+    }
 }
