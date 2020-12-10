@@ -131,6 +131,51 @@ class ResponseCodableTests: XCTestCase {
         }
         waitForExpectations(timeout: 10, handler: nil)
     }
+    
+    func testAddToBasket() {
+        let expectation = self.expectation(description: "Добавление в корзину успешно")
+        let basket = requestFactory.makeBasketRequestFatory()
+        basket.addToBasket(productId: Int.random(in: 1..<100), quantity: Int.random(in: 1..<100)) { response in
+            switch response.result {
+            case .success(let result):
+                XCTAssert(true, result.result.description)
+            case .failure(let error):
+                XCTFail(error.localizedDescription)
+            }
+            expectation.fulfill()
+        }
+        waitForExpectations(timeout: 10, handler: nil)
+    }
+    
+    func testRemoveFromBasket() {
+        let expectation = self.expectation(description: "Удаление из корзины успешно")
+        let basket = requestFactory.makeBasketRequestFatory()
+        basket.deleteFromBasket(productId: Int.random(in: 1..<100)) { response in
+            switch response.result {
+            case .success(let result):
+                XCTAssert(true, result.result.description)
+            case .failure(let error):
+                XCTFail(error.localizedDescription)
+            }
+            expectation.fulfill()
+        }
+        waitForExpectations(timeout: 10, handler: nil)
+    }
+    
+    func testPayBasket() {
+        let expectation = self.expectation(description: "Покупка корзины прошла успешно")
+        let basket = requestFactory.makeBasketRequestFatory()
+        basket.payBasket(userId: Int.random(in: 1..<100)) { response in
+            switch response.result {
+            case .success(let result):
+                print(result)
+            case .failure(let error):
+                XCTFail(error.localizedDescription)
+            }
+            expectation.fulfill()
+        }
+        waitForExpectations(timeout: 10, handler: nil)
+    }
 }
 
 struct PostStub: Codable {

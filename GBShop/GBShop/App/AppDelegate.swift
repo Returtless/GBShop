@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print(error.localizedDescription)
             }
         }
-        
+
         auth.registration(userName: "Somebody", password: "mypassword", email: "some@some.ru", gender: "m", cardNumber: "9872389-2424-234224-234", comment: "Hello") { response in
             print("Результат регистрации:")
             switch response.result {
@@ -53,7 +53,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print(error.localizedDescription)
             }
         }
-        
+
         let userReviews = requestFactory.makeUserReviewsRequestFatory()
         userReviews.addReview(userId: Int.random(in: 1..<100), text: "Отзыв") { response in
             print("Результат добавления отзыва:")
@@ -74,10 +74,39 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 print(error.localizedDescription)
             }
         }
-        
+
         let manageReviews = requestFactory.makeManageReviewsRequestFatory()
         manageReviews.approveReview(reviewId: Int.random(in: 1..<100)) { response in
             print("Результат подтверждения отзыва:")
+            switch response.result {
+            case .success(let result):
+                print(result)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+        
+        let basket = requestFactory.makeBasketRequestFatory()
+        basket.addToBasket(productId: Int.random(in: 1..<100), quantity: Int.random(in: 1..<100)) { response in
+            print("Результат добавления в корзину:")
+            switch response.result {
+            case .success(let result):
+                print(result)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+        basket.deleteFromBasket(productId: Int.random(in: 1..<100)) { response in
+            print("Результат удаления из корзины:")
+            switch response.result {
+            case .success(let result):
+                print(result)
+            case .failure(let error):
+                print(error.localizedDescription)
+            }
+        }
+        basket.payBasket(userId: Int.random(in: 1..<100)) { response in
+            print("Результат покупки корзины:")
             switch response.result {
             case .success(let result):
                 print(result)
