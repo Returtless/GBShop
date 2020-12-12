@@ -18,6 +18,7 @@
 		527F5D772584F6E00043A6F8 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527F5D752584F6E00043A6F8 /* ProfileViewController.swift */; };
 		527F5D782584F6E00043A6F8 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 527F5D762584F6E00043A6F8 /* ProfileViewController.xib */; };
 		527F5D7C2584FAE00043A6F8 /* WorkingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527F5D7B2584FAE00043A6F8 /* WorkingViewController.swift */; };
+		527F5D8025852A900043A6F8 /* LoginViewControllerTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527F5D7F25852A900043A6F8 /* LoginViewControllerTest.swift */; };
 		528880E22573FEE40081C195 /* GBShopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528880E12573FEE40081C195 /* GBShopTests.swift */; };
 		528880EC2573FF0C0081C195 /* ResponseCodableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528880EB2573FF0C0081C195 /* ResponseCodableTests.swift */; };
 		52A2CE3D256AA783000FFEBB /* AbstractErrorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A2CE3C256AA783000FFEBB /* AbstractErrorParser.swift */; };
@@ -59,6 +60,7 @@
 		527F5D752584F6E00043A6F8 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		527F5D762584F6E00043A6F8 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
 		527F5D7B2584FAE00043A6F8 /* WorkingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkingViewController.swift; sourceTree = "<group>"; };
+		527F5D7F25852A900043A6F8 /* LoginViewControllerTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewControllerTest.swift; sourceTree = "<group>"; };
 		528880DF2573FEE40081C195 /* GBShopTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GBShopTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		528880E12573FEE40081C195 /* GBShopTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBShopTests.swift; sourceTree = "<group>"; };
 		528880E32573FEE40081C195 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				528880E12573FEE40081C195 /* GBShopTests.swift */,
 				528880E32573FEE40081C195 /* Info.plist */,
 				528880EB2573FF0C0081C195 /* ResponseCodableTests.swift */,
+				527F5D7F25852A900043A6F8 /* LoginViewControllerTest.swift */,
 			);
 			path = GBShopTests;
 			sourceTree = "<group>";
@@ -463,6 +466,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				527F5D8025852A900043A6F8 /* LoginViewControllerTest.swift in Sources */,
 				528880E22573FEE40081C195 /* GBShopTests.swift in Sources */,
 				528880EC2573FF0C0081C195 /* ResponseCodableTests.swift in Sources */,
 			);

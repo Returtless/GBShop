@@ -33,7 +33,7 @@ class ProfileViewController: UIViewController {
     }
     
     @IBAction func saveButtonWasTapped(_ sender: UIButton) {
-        let auth = requestFactory.makeAuthRequestFatory()
+        let auth = requestFactory.makeAuthRequestFactory()
         if isRegisterWindow{
             registerRequest(auth: auth)
         } else {

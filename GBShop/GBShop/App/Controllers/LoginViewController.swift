@@ -37,7 +37,7 @@ class LoginViewController: UIViewController {
             return
         }
         
-        let auth = requestFactory.makeAuthRequestFatory()
+        let auth = requestFactory.makeAuthRequestFactory()
         auth.login(userName: login, password: password) { response in
             switch response.result {
             case .success(_):

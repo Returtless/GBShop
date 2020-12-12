@@ -28,7 +28,7 @@ class ResponseCodableTests: XCTestCase {
     
     func testAuth() {
         let expectation = self.expectation(description: "Авторизация успешна")
-        let auth = requestFactory.makeAuthRequestFatory()
+        let auth = requestFactory.makeAuthRequestFactory()
         auth.login(userName: "123", password: "mypassword") { response in
             switch response.result {
             case .success(let login):
@@ -44,7 +44,7 @@ class ResponseCodableTests: XCTestCase {
     
     func testRegistration() {
         let expectation = self.expectation(description: "End")
-        let auth = requestFactory.makeAuthRequestFatory()
+        let auth = requestFactory.makeAuthRequestFactory()
         auth.registration(userName: "Somebody", password: "mypassword", email: "some@some.ru", gender: "m", cardNumber: "9872389-2424-234224-234", comment: "Hello") { response in
             switch response.result {
             case .success(let res):
@@ -59,7 +59,7 @@ class ResponseCodableTests: XCTestCase {
     
     func testLogout() {
         let expectation = self.expectation(description: "Выход успешен")
-        let auth = requestFactory.makeAuthRequestFatory()
+        let auth = requestFactory.makeAuthRequestFactory()
         auth.logout(id: 123) { response in
             switch response.result {
             case .success(let login):
@@ -74,7 +74,7 @@ class ResponseCodableTests: XCTestCase {
     
     func testChangeData() {
         let expectation = self.expectation(description: "Смена данных успешна")
-        let auth = requestFactory.makeAuthRequestFatory()
+        let auth = requestFactory.makeAuthRequestFactory()
         auth.changeData(userName: "Somebody", password: "mypassword", email: "some@some.ru", gender: "m", cardNumber: "9872389-2424-234224-234", comment: "Hello") { response in
             switch response.result {
             case .success(let login):
@@ -89,7 +89,7 @@ class ResponseCodableTests: XCTestCase {
     
     func testAddReview() {
         let expectation = self.expectation(description: "Добавление отзыва успешно")
-        let userReviews = requestFactory.makeUserReviewsRequestFatory()
+        let userReviews = requestFactory.makeUserReviewsRequestFactory()
         userReviews.addReview(userId: Int.random(in: 1..<100), text: "Отзыв") { response in
             switch response.result {
             case .success(let result):
@@ -104,7 +104,7 @@ class ResponseCodableTests: XCTestCase {
     
     func testRemoveReview() {
         let expectation = self.expectation(description: "Удаление отзыва успешно")
-        let userReviews = requestFactory.makeUserReviewsRequestFatory()
+        let userReviews = requestFactory.makeUserReviewsRequestFactory()
         userReviews.removeReview(reviewId: Int.random(in: 1..<100)) { response in
             switch response.result {
             case .success(let result):
@@ -119,7 +119,7 @@ class ResponseCodableTests: XCTestCase {
     
     func testApproveReview() {
         let expectation = self.expectation(description: "Подтверждение отзыва успешно")
-        let manageReviews = requestFactory.makeManageReviewsRequestFatory()
+        let manageReviews = requestFactory.makeManageReviewsRequestFactory()
         manageReviews.approveReview(reviewId: Int.random(in: 1..<100)) { response in
             switch response.result {
             case .success(let result):
@@ -134,7 +134,7 @@ class ResponseCodableTests: XCTestCase {
     
     func testAddToBasket() {
         let expectation = self.expectation(description: "Добавление в корзину успешно")
-        let basket = requestFactory.makeBasketRequestFatory()
+        let basket = requestFactory.makeBasketRequestFactory()
         basket.addToBasket(productId: Int.random(in: 1..<100), quantity: Int.random(in: 1..<100)) { response in
             switch response.result {
             case .success(let result):
@@ -149,7 +149,7 @@ class ResponseCodableTests: XCTestCase {
     
     func testRemoveFromBasket() {
         let expectation = self.expectation(description: "Удаление из корзины успешно")
-        let basket = requestFactory.makeBasketRequestFatory()
+        let basket = requestFactory.makeBasketRequestFactory()
         basket.deleteFromBasket(productId: Int.random(in: 1..<100)) { response in
             switch response.result {
             case .success(let result):
@@ -164,7 +164,7 @@ class ResponseCodableTests: XCTestCase {
     
     func testPayBasket() {
         let expectation = self.expectation(description: "Покупка корзины прошла успешно")
-        let basket = requestFactory.makeBasketRequestFatory()
+        let basket = requestFactory.makeBasketRequestFactory()
         basket.payBasket(userId: Int.random(in: 1..<100)) { response in
             switch response.result {
             case .success(let result):
