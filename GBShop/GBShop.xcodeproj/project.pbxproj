@@ -13,6 +13,11 @@
 		527F5D56257D46710043A6F8 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527F5D55257D46710043A6F8 /* Review.swift */; };
 		527F5D5A257D46C10043A6F8 /* ManageReviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527F5D59257D46C10043A6F8 /* ManageReviews.swift */; };
 		527F5D64257D6E2A0043A6F8 /* Basket.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527F5D63257D6E2A0043A6F8 /* Basket.swift */; };
+		527F5D712584A1030043A6F8 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527F5D6F2584A1030043A6F8 /* LoginViewController.swift */; };
+		527F5D722584A1030043A6F8 /* LoginViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 527F5D702584A1030043A6F8 /* LoginViewController.xib */; };
+		527F5D772584F6E00043A6F8 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527F5D752584F6E00043A6F8 /* ProfileViewController.swift */; };
+		527F5D782584F6E00043A6F8 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 527F5D762584F6E00043A6F8 /* ProfileViewController.xib */; };
+		527F5D7C2584FAE00043A6F8 /* WorkingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527F5D7B2584FAE00043A6F8 /* WorkingViewController.swift */; };
 		528880E22573FEE40081C195 /* GBShopTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528880E12573FEE40081C195 /* GBShopTests.swift */; };
 		528880EC2573FF0C0081C195 /* ResponseCodableTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528880EB2573FF0C0081C195 /* ResponseCodableTests.swift */; };
 		52A2CE3D256AA783000FFEBB /* AbstractErrorParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52A2CE3C256AA783000FFEBB /* AbstractErrorParser.swift */; };
@@ -49,6 +54,11 @@
 		527F5D55257D46710043A6F8 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
 		527F5D59257D46C10043A6F8 /* ManageReviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageReviews.swift; sourceTree = "<group>"; };
 		527F5D63257D6E2A0043A6F8 /* Basket.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Basket.swift; sourceTree = "<group>"; };
+		527F5D6F2584A1030043A6F8 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		527F5D702584A1030043A6F8 /* LoginViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoginViewController.xib; sourceTree = "<group>"; };
+		527F5D752584F6E00043A6F8 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		527F5D762584F6E00043A6F8 /* ProfileViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		527F5D7B2584FAE00043A6F8 /* WorkingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkingViewController.swift; sourceTree = "<group>"; };
 		528880DF2573FEE40081C195 /* GBShopTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GBShopTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		528880E12573FEE40081C195 /* GBShopTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBShopTests.swift; sourceTree = "<group>"; };
 		528880E32573FEE40081C195 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -96,6 +106,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		527F5D6E2584A0C60043A6F8 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				527F5D6F2584A1030043A6F8 /* LoginViewController.swift */,
+				527F5D702584A1030043A6F8 /* LoginViewController.xib */,
+				527F5D752584F6E00043A6F8 /* ProfileViewController.swift */,
+				527F5D762584F6E00043A6F8 /* ProfileViewController.xib */,
+				527F5D7B2584FAE00043A6F8 /* WorkingViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		528880E02573FEE40081C195 /* GBShopTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -174,6 +196,7 @@
 		52CD90BE2566FC0A002C997D /* App */ = {
 			isa = PBXGroup;
 			children = (
+				527F5D6E2584A0C60043A6F8 /* Controllers */,
 				52A2CE51256AB8DC000FFEBB /* BusinessLogic */,
 				52CD90A92566FA66002C997D /* AppDelegate.swift */,
 				52CD90AB2566FA66002C997D /* SceneDelegate.swift */,
@@ -347,6 +370,8 @@
 			files = (
 				52CD90B62566FA68002C997D /* LaunchScreen.storyboard in Resources */,
 				52CD90B32566FA68002C997D /* Assets.xcassets in Resources */,
+				527F5D782584F6E00043A6F8 /* ProfileViewController.xib in Resources */,
+				527F5D722584A1030043A6F8 /* LoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -453,13 +478,16 @@
 				52A2CE5E256AB988000FFEBB /* RequestFactory.swift in Sources */,
 				52A2CE3D256AA783000FFEBB /* AbstractErrorParser.swift in Sources */,
 				52CD90AA2566FA66002C997D /* AppDelegate.swift in Sources */,
+				527F5D772584F6E00043A6F8 /* ProfileViewController.swift in Sources */,
 				52A2CE58256AB917000FFEBB /* RequestFactories.swift in Sources */,
 				52A2CE49256AB58F000FFEBB /* RequestRouter.swift in Sources */,
 				52CD90AC2566FA66002C997D /* SceneDelegate.swift in Sources */,
 				52A2CE4C256AB6E0000FFEBB /* StandardResult.swift in Sources */,
+				527F5D7C2584FAE00043A6F8 /* WorkingViewController.swift in Sources */,
 				52A2CE5B256AB949000FFEBB /* Auth.swift in Sources */,
 				52A2CE4F256AB70B000FFEBB /* User.swift in Sources */,
 				52A2CE46256AAD06000FFEBB /* DataRequest.swift in Sources */,
+				527F5D712584A1030043A6F8 /* LoginViewController.swift in Sources */,
 				527F5D56257D46710043A6F8 /* Review.swift in Sources */,
 				52A2CE43256AA843000FFEBB /* CustomDecodableSerializer.swift in Sources */,
 				52A2CE40256AA7DF000FFEBB /* ErrorParser.swift in Sources */,
