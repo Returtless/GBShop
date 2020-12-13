@@ -24,3 +24,10 @@ protocol ManageReviewsRequestFactory {
     func getReviewsForProduct(productId: Int, completionHandler: @escaping (AFDataResponse<StandardResult>) -> Void)
     func approveReview(reviewId: Int, completionHandler: @escaping (AFDataResponse<StandardResult>) -> Void)
 }
+
+protocol BasketRequestFactory {
+    func addToBasket(productId: Int, quantity : Int, completionHandler: @escaping (AFDataResponse<ProductResult>) -> Void)
+    func deleteFromBasket(productId: Int, completionHandler: @escaping (AFDataResponse<ProductResult>) -> Void)
+    
+    func payBasket(userId: Int, completionHandler: @escaping (AFDataResponse<UserBasketResult>) -> Void)
+}
