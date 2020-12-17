@@ -36,7 +36,37 @@ class LoginViewController: UIViewController {
             passwordTextField.isError(baseColor: UIColor.gray.cgColor, numberOfShakes: 3, revert: true)
             return
         }
-        
+        authorize(login: login, password: password)
+    }
+    
+
+    
+    func configureRegisterLabel(){
+        let tap = UITapGestureRecognizer(target: self, action: #selector(registerTap))
+        registerLabel.isUserInteractionEnabled = true
+        registerLabel.addGestureRecognizer(tap)
+        let attributedString = NSMutableAttributedString(string: "Зарегистрироваться")
+        attributedString.addAttribute(.link, value: "Зарегистрироваться", range: NSRange(location: 0, length: 18))
+        registerLabel.attributedText = attributedString
+    }
+    
+    @objc
+    func registerTap(sender:UITapGestureRecognizer) {
+        showProfileViewController(isRegister: true)
+    }
+    
+    func configureTextFields(){
+        loginTextField.setBottomBorderOnlyWith(color: UIColor.gray.cgColor)
+        passwordTextField.setBottomBorderOnlyWith(color: UIColor.gray.cgColor)
+    }
+    
+    func showProfileViewController(isRegister : Bool){
+        let tabBarViewController = TabBarController()
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        appDelegate.navigationController?.pushViewController(tabBarViewController, animated: true)
+    }
+    
+    func authorize(login : String, password : String){
         let auth = requestFactory.makeAuthRequestFactory()
         auth.login(userName: login, password: password) { response in
             switch response.result {
@@ -46,37 +76,10 @@ class LoginViewController: UIViewController {
                 }
             case .failure(let error):
                 DispatchQueue.main.async {
-                    let alert = UIAlertController(title: "Ошибка авторизации", message: error.errorDescription, preferredStyle: .alert)
-                    alert.addAction(UIAlertAction(title: "OK", style: .default))
-                    self.present(alert, animated: true, completion: nil)
+                    self.showAlert(title: "Ошибка авторизации!", message: error.errorDescription ?? "")
                 }
             }
         }
-    }
-    @objc
-    func tapFunction(sender:UITapGestureRecognizer) {
-        showProfileViewController(isRegister: true)
-    }
-    
-    func configureRegisterLabel(){
-        let tap = UITapGestureRecognizer(target: self, action: #selector(tapFunction))
-        registerLabel.isUserInteractionEnabled = true
-        registerLabel.addGestureRecognizer(tap)
-        let attributedString = NSMutableAttributedString(string: "Зарегистрироваться")
-        attributedString.addAttribute(.link, value: "Зарегистрироваться", range: NSRange(location: 0, length: 18))
-        registerLabel.attributedText = attributedString
-    }
-    
-    func configureTextFields(){
-        loginTextField.setBottomBorderOnlyWith(color: UIColor.gray.cgColor)
-        passwordTextField.setBottomBorderOnlyWith(color: UIColor.gray.cgColor)
-    }
-    
-    func showProfileViewController(isRegister : Bool){
-        let profileViewController = ProfileViewController(nibName: "ProfileViewController", bundle: nil)
-        profileViewController.isRegisterWindow = isRegister
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        appDelegate.navigationController?.pushViewController(profileViewController, animated: true)
     }
 }
 

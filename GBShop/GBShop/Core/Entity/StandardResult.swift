@@ -36,13 +36,6 @@ struct UserBasketResult: Codable {
     var countGoods: Int
     var contents: [Product]
     var userMoney: Int?
-    
-    struct Product: Codable {
-        var id_product: Int
-        var product_name: String
-        var price: Int
-        var quantity: Int?
-    }
 
     enum CodingKeys: String, CodingKey {
         case amount
@@ -50,12 +43,21 @@ struct UserBasketResult: Codable {
         case contents
         case userMoney
     }
-//    required convenience init(from decoder: Decoder) throws {
-//        self.init()
-//        let container = try decoder.container(keyedBy: CodingKeys.self)
-//        self.contents = (try? container.decodeIfPresent(Array<Product>.self, forKey: .contents)) ?? []
-//        self.countGoods = (try? container.decodeIfPresent(Int.self, forKey: .countGoods)) ?? 0
-//        self.userMoney = (try? container.decodeIfPresent(Int.self, forKey: .userMoney))
-//        self.amount = (try? container.decodeIfPresent(Int.self, forKey: .amount)) ?? 0
-//    }
+}
+
+struct Product: Codable {
+    var id_product: Int
+    var product_name: String
+    var price: Int
+    var quantity: Int?
+}
+
+struct ProductsResult: Codable {
+    var pageNumber: Int
+    var products: [Product]
+
+    enum CodingKeys: String, CodingKey {
+        case pageNumber = "page_number"
+        case products
+    }
 }

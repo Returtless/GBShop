@@ -176,6 +176,21 @@ class ResponseCodableTests: XCTestCase {
         }
         waitForExpectations(timeout: 10, handler: nil)
     }
+    
+    func testPayBasket() {
+        let expectation = self.expectation(description: "Покупка корзины прошла успешно")
+        let basket = requestFactory.makeBasketRequestFactory()
+        basket.payBasket(userId: Int.random(in: 1..<100)) { response in
+            switch response.result {
+            case .success(let result):
+                print(result)
+            case .failure(let error):
+                XCTFail(error.localizedDescription)
+            }
+            expectation.fulfill()
+        }
+        waitForExpectations(timeout: 10, handler: nil)
+    }
 }
 
 struct PostStub: Codable {

@@ -22,12 +22,9 @@ class ProfileViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         if (isRegisterWindow){
-            titleLabel.text = "Регистрация"
-            saveButton.setTitle("Зарегистрироваться", for: .normal)
+            configureUI(labelText: "Регистрация", buttonText: "Зарегистрироваться", isRegisterWindow: true)
         } else {
-            configureLabels()
-            saveButton.setTitle("Сохранить изменения", for: .normal)
-            titleLabel.text = "Информация о пользователе"
+            configureUI(labelText: "Информация о пользователе", buttonText: "Сохранить изменения", isRegisterWindow: false)
         }
         
     }
@@ -39,6 +36,15 @@ class ProfileViewController: UIViewController {
         } else {
             saveDataRequest(auth: auth)
         }
+    }
+    
+    func configureUI(labelText : String, buttonText : String, isRegisterWindow : Bool){
+        if (!isRegisterWindow){
+            configureLabels()
+        }
+        
+        titleLabel.text = labelText
+        saveButton.setTitle(buttonText, for: .normal)
     }
     
     func configureLabels(){
@@ -88,11 +94,6 @@ class ProfileViewController: UIViewController {
                 }
             }
         }
-    }
-    func showAlert(title : String, message: String){
-        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        alert.addAction(UIAlertAction(title: "OK", style: .default))
-        self.present(alert, animated: true, completion: nil)
     }
     
 }

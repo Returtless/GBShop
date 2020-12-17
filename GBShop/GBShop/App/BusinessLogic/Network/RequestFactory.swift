@@ -43,4 +43,9 @@ class RequestFactory {
         let errorParser = makeErrorParser()
         return Basket(errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
     }
+    
+    func makeProductsRequestFactory() -> ProductsRequestFactory {
+        let errorParser = makeErrorParser()
+        return Products(errorParser: errorParser, sessionManager: commonSession, queue: sessionQueue)
+    }
 }
