@@ -31,3 +31,7 @@ protocol BasketRequestFactory {
     
     func payBasket(userId: Int, completionHandler: @escaping (AFDataResponse<UserBasketResult>) -> Void)
 }
+
+protocol ProductsRequestFactory {
+    func catalogData(categoryId: Int, pageNumber: Int, completionHandler: @escaping (AFDataResponse<ProductsResult>) -> Void)
+}
