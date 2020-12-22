@@ -21,4 +21,9 @@ class ProductsTableViewCell: UITableViewCell {
         self.productNameLabel.text = product.product_name
         self.priceLabel.text = "\(product.price)"
     }
+    
+    func configureFor(review : Review){
+        self.productNameLabel.text = review.text
+        self.priceLabel.text = "User"
+    }
 }

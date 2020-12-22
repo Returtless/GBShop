@@ -59,18 +59,9 @@ class ProductsListViewController: UIViewController, UITableViewDelegate, UITable
     }
     
     func addProductToBasketByTap(product : Product){
-        let basket = requestFactory.makeBasketRequestFactory()
-        basket.addToBasket(productId: product.id_product, quantity: 1) { response in
-            switch response.result {
-            case .success(_):
-                DispatchQueue.main.async {
-                    self.showAlert(title: "ОК!", message: "Товар добавлен в корзину")
-                }
-            case .failure(let error):
-                DispatchQueue.main.async {
-                    self.showAlert(title: "Ошибка!", message: error.errorDescription ?? "")
-                }
-            }
-        }
+        let productViewController = ProductViewController()
+        let appDelegate = UIApplication.shared.delegate as! AppDelegate
+        productViewController.product = product
+        appDelegate.navigationController?.pushViewController(productViewController, animated: true)
     }
 }

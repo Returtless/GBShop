@@ -26,12 +26,12 @@ class ManageReviews: AbstractRequestFactory {
 
 extension ManageReviews: ManageReviewsRequestFactory {
     func approveReview(reviewId: Int, completionHandler: @escaping (AFDataResponse<StandardResult>) -> Void) {
-        let requestModel = Review(baseUrl: baseUrl, path: Review.Pathes.approveReview.rawValue, id: reviewId, productId: nil, userId: nil, text: nil)
+        let requestModel = ReviewRequest(baseUrl: baseUrl, path: ReviewRequest.Pathes.approveReview.rawValue, id: reviewId, productId: nil, userId: nil, text: nil)
         self.request(request: requestModel, completionHandler: completionHandler)
     }
     
     func getReviewsForProduct(productId: Int, completionHandler: @escaping (AFDataResponse<StandardResult>) -> Void) {
-        let requestModel = Review(baseUrl: baseUrl, path: Review.Pathes.approveReview.rawValue, id: nil, productId: productId, userId: nil, text: nil)
+        let requestModel = ReviewRequest(baseUrl: baseUrl, path: ReviewRequest.Pathes.approveReview.rawValue, id: nil, productId: productId, userId: nil, text: nil)
         self.request(request: requestModel, completionHandler: completionHandler)
     }
 
