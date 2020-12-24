@@ -21,6 +21,8 @@
 		5214C3ED2591170700B48EB7 /* ReviewsTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5214C3EB2591170700B48EB7 /* ReviewsTableViewController.xib */; };
 		5214C3F12591191400B48EB7 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5214C3F02591191400B48EB7 /* Product.swift */; };
 		5214C3F52591192800B48EB7 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5214C3F42591192800B48EB7 /* Review.swift */; };
+		5214C40C2595138D00B48EB7 /* BasketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5214C40A2595138D00B48EB7 /* BasketViewController.swift */; };
+		5214C40D2595138D00B48EB7 /* BasketViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5214C40B2595138D00B48EB7 /* BasketViewController.xib */; };
 		527F5D50257D1D3F0043A6F8 /* UserReviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527F5D4F257D1D3F0043A6F8 /* UserReviews.swift */; };
 		527F5D56257D46710043A6F8 /* ReviewRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527F5D55257D46710043A6F8 /* ReviewRequest.swift */; };
 		527F5D5A257D46C10043A6F8 /* ManageReviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527F5D59257D46C10043A6F8 /* ManageReviews.swift */; };
@@ -75,6 +77,8 @@
 		5214C3EB2591170700B48EB7 /* ReviewsTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReviewsTableViewController.xib; sourceTree = "<group>"; };
 		5214C3F02591191400B48EB7 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		5214C3F42591192800B48EB7 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
+		5214C40A2595138D00B48EB7 /* BasketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketViewController.swift; sourceTree = "<group>"; };
+		5214C40B2595138D00B48EB7 /* BasketViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasketViewController.xib; sourceTree = "<group>"; };
 		527F5D4F257D1D3F0043A6F8 /* UserReviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserReviews.swift; sourceTree = "<group>"; };
 		527F5D55257D46710043A6F8 /* ReviewRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewRequest.swift; sourceTree = "<group>"; };
 		527F5D59257D46C10043A6F8 /* ManageReviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageReviews.swift; sourceTree = "<group>"; };
@@ -141,6 +145,7 @@
 				5214C3D5258BEC0200B48EB7 /* ProductsTableViewCell.xib */,
 				5214C3E32590FE3800B48EB7 /* ProductViewController.xib */,
 				5214C3EB2591170700B48EB7 /* ReviewsTableViewController.xib */,
+				5214C40B2595138D00B48EB7 /* BasketViewController.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -156,6 +161,7 @@
 				5214C3D4258BEC0200B48EB7 /* ProductsTableViewCell.swift */,
 				5214C3E22590FE3800B48EB7 /* ProductViewController.swift */,
 				5214C3EA2591170700B48EB7 /* ReviewsTableViewController.swift */,
+				5214C40A2595138D00B48EB7 /* BasketViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -422,6 +428,7 @@
 				5214C3C3258B496800B48EB7 /* ProductsListViewController.xib in Resources */,
 				52CD90B32566FA68002C997D /* Assets.xcassets in Resources */,
 				527F5D782584F6E00043A6F8 /* ProfileViewController.xib in Resources */,
+				5214C40D2595138D00B48EB7 /* BasketViewController.xib in Resources */,
 				527F5D722584A1030043A6F8 /* LoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -526,6 +533,7 @@
 			files = (
 				527F5D5A257D46C10043A6F8 /* ManageReviews.swift in Sources */,
 				5214C3D6258BEC0200B48EB7 /* ProductsTableViewCell.swift in Sources */,
+				5214C40C2595138D00B48EB7 /* BasketViewController.swift in Sources */,
 				527F5D64257D6E2A0043A6F8 /* Basket.swift in Sources */,
 				527F5D50257D1D3F0043A6F8 /* UserReviews.swift in Sources */,
 				5214C3C7258BD3C200B48EB7 /* Products.swift in Sources */,
