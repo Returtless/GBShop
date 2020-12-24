@@ -45,13 +45,6 @@ struct UserBasketResult: Codable {
     }
 }
 
-struct Product: Codable {
-    var id_product: Int
-    var product_name: String
-    var price: Int
-    var quantity: Int?
-}
-
 struct ProductsResult: Codable {
     var pageNumber: Int
     var products: [Product]
