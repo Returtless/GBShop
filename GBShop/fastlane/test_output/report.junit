@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<testsuites name='GBShopUITests.xctest' tests='18' failures='0'>
+  <testsuite name='GBShopTests.GBShopTests' tests='2' failures='0'>
+    <testcase classname='GBShopTests.GBShopTests' name='testExample' time='0.003'/>
+    <testcase classname='GBShopTests.GBShopTests' name='testPerformanceExample' time='0.317'/>
+  </testsuite>
+  <testsuite name='GBShopTests.LoginViewControllerTest' tests='3' failures='0'>
+    <testcase classname='GBShopTests.LoginViewControllerTest' name='testAuthRequest' time='0.367'/>
+    <testcase classname='GBShopTests.LoginViewControllerTest' name='testFillingTextFields' time='0.004'/>
+    <testcase classname='GBShopTests.LoginViewControllerTest' name='testPerformanceExample' time='0.254'/>
+  </testsuite>
+  <testsuite name='GBShopTests.ResponseCodableTests' tests='10' failures='0'>
+    <testcase classname='GBShopTests.ResponseCodableTests' name='testAddReview' time='0.425'/>
+    <testcase classname='GBShopTests.ResponseCodableTests' name='testAddToBasket' time='0.325'/>
+    <testcase classname='GBShopTests.ResponseCodableTests' name='testApproveReview' time='0.336'/>
+    <testcase classname='GBShopTests.ResponseCodableTests' name='testAuth' time='0.356'/>
+    <testcase classname='GBShopTests.ResponseCodableTests' name='testChangeData' time='0.407'/>
+    <testcase classname='GBShopTests.ResponseCodableTests' name='testLogout' time='0.339'/>
+    <testcase classname='GBShopTests.ResponseCodableTests' name='testPayBasket' time='0.328'/>
+    <testcase classname='GBShopTests.ResponseCodableTests' name='testRegistration' time='0.288'/>
+    <testcase classname='GBShopTests.ResponseCodableTests' name='testRemoveFromBasket' time='0.304'/>
+    <testcase classname='GBShopTests.ResponseCodableTests' name='testRemoveReview' time='0.358'/>
+  </testsuite>
+  <testsuite name='GBShopUITests.GBShopUITests' tests='3' failures='0'>
+    <testcase classname='GBShopUITests.GBShopUITests' name='testFail' time='4.193'/>
+    <testcase classname='GBShopUITests.GBShopUITests' name='testLaunchPerformance' time='18.713'/>
+    <testcase classname='GBShopUITests.GBShopUITests' name='testSuccess' time='4.063'/>
+  </testsuite>
+</testsuites>

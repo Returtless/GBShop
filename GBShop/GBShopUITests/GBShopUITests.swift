@@ -32,15 +32,15 @@ class GBShopUITests: XCTestCase {
             loginTextField.typeText(login)
         }
         
-        let passwordTextField = app.textFields.element(boundBy: 1)
-        if passwordTextField.exists {
-            passwordTextField.tap()
-            passwordTextField.typeText(password)
-        }
+//        let passwordTextField = app.textFields.element(boundBy: 1)
+//        if passwordTextField.exists {
+//            passwordTextField.tap()
+//            passwordTextField.typeText(password)
+//        }
         
 
        
-        app.staticTexts["Войти"].tap()
+        //app.staticTexts["Войти"].tap()
     }
     
     func testSuccess() {
