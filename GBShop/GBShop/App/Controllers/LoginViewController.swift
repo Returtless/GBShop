@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FirebaseCrashlytics
 
 class LoginViewController: UIViewController {
     let requestFactory = RequestFactory()
@@ -72,7 +73,7 @@ class LoginViewController: UIViewController {
             switch response.result {
             case .success(_):
                 DispatchQueue.main.async {
-                    self.showProfileViewController(isRegister: false)
+                    fatalError("testerovaka")
                 }
             case .failure(let error):
                 DispatchQueue.main.async {
