@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites>
+  <testsuite name="fastlane.lanes">
+    
+    
+    
+      
+      <testcase classname="fastlane.lanes" name="0: default_platform" time="0.000675">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="1: clear_derived_data" time="0.5727">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="2: xcclean" time="1.574366">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="3: cocoapods" time="2.578115">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="4: run_tests" time="167.792724">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="5: increment_build_number" time="2.510869">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="6: set_info_plist_value" time="0.015813">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="7: get_version_number" time="0.10185">
+        
+      </testcase>
+    
+      
+      <testcase classname="fastlane.lanes" name="8: get_build_number" time="0.6419">
+        
+      </testcase>
+    
+  </testsuite>
+</testsuites>

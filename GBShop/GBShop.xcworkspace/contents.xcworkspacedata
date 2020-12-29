@@ -5,6 +5,9 @@
       location = "group:GBShop.xcodeproj">
    </FileRef>
    <FileRef
+      location = "container:GoogleService-Info.plist">
+   </FileRef>
+   <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
 </Workspace>
