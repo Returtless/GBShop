@@ -12,3 +12,6 @@ target 'GBShopTests' do
         pod 'Alamofire'
     end
 end
+
+pod 'Firebase/Analytics'
+pod 'Firebase/Crashlytics'

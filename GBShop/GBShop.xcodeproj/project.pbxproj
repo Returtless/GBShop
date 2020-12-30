@@ -24,6 +24,7 @@
 		5214C40C2595138D00B48EB7 /* BasketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5214C40A2595138D00B48EB7 /* BasketViewController.swift */; };
 		5214C40D2595138D00B48EB7 /* BasketViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5214C40B2595138D00B48EB7 /* BasketViewController.xib */; };
 		5214C41C25952E5F00B48EB7 /* GBShopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5214C41B25952E5F00B48EB7 /* GBShopUITests.swift */; };
+		5265AFE4259B892A0006910A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5265AFE3259B892A0006910A /* GoogleService-Info.plist */; };
 		527F5D50257D1D3F0043A6F8 /* UserReviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527F5D4F257D1D3F0043A6F8 /* UserReviews.swift */; };
 		527F5D56257D46710043A6F8 /* ReviewRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527F5D55257D46710043A6F8 /* ReviewRequest.swift */; };
 		527F5D5A257D46C10043A6F8 /* ManageReviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527F5D59257D46C10043A6F8 /* ManageReviews.swift */; };
@@ -90,6 +91,7 @@
 		5214C41925952E5F00B48EB7 /* GBShopUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GBShopUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5214C41B25952E5F00B48EB7 /* GBShopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBShopUITests.swift; sourceTree = "<group>"; };
 		5214C41D25952E5F00B48EB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5265AFE3259B892A0006910A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		527F5D4F257D1D3F0043A6F8 /* UserReviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserReviews.swift; sourceTree = "<group>"; };
 		527F5D55257D46710043A6F8 /* ReviewRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewRequest.swift; sourceTree = "<group>"; };
 		527F5D59257D46C10043A6F8 /* ManageReviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageReviews.swift; sourceTree = "<group>"; };
@@ -297,6 +299,7 @@
 			children = (
 				52CD90B42566FA68002C997D /* LaunchScreen.storyboard */,
 				52CD90B72566FA68002C997D /* Info.plist */,
+				5265AFE3259B892A0006910A /* GoogleService-Info.plist */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -409,6 +412,7 @@
 				52CD90A32566FA66002C997D /* Frameworks */,
 				52CD90A42566FA66002C997D /* Resources */,
 				B95291D9F1A283884A4333BD /* [CP] Embed Pods Frameworks */,
+				5265AFC7259B86DE0006910A /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -487,6 +491,7 @@
 				5214C3C3258B496800B48EB7 /* ProductsListViewController.xib in Resources */,
 				52CD90B32566FA68002C997D /* Assets.xcassets in Resources */,
 				527F5D782584F6E00043A6F8 /* ProfileViewController.xib in Resources */,
+				5265AFE4259B892A0006910A /* GoogleService-Info.plist in Resources */,
 				5214C40D2595138D00B48EB7 /* BasketViewController.xib in Resources */,
 				527F5D722584A1030043A6F8 /* LoginViewController.xib in Resources */,
 			);
@@ -516,6 +521,25 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		5265AFC7259B86DE0006910A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
+				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
 		};
 		6A297ECB2FC90D500E97D83F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -864,6 +888,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = A9AML55U6D;
 				INFOPLIST_FILE = "GBShop/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -884,6 +909,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = A9AML55U6D;
 				INFOPLIST_FILE = "GBShop/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
