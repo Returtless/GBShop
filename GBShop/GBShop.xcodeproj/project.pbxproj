@@ -21,6 +21,10 @@
 		5214C3ED2591170700B48EB7 /* ReviewsTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5214C3EB2591170700B48EB7 /* ReviewsTableViewController.xib */; };
 		5214C3F12591191400B48EB7 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5214C3F02591191400B48EB7 /* Product.swift */; };
 		5214C3F52591192800B48EB7 /* Review.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5214C3F42591192800B48EB7 /* Review.swift */; };
+		5214C40C2595138D00B48EB7 /* BasketViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5214C40A2595138D00B48EB7 /* BasketViewController.swift */; };
+		5214C40D2595138D00B48EB7 /* BasketViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5214C40B2595138D00B48EB7 /* BasketViewController.xib */; };
+		5214C41C25952E5F00B48EB7 /* GBShopUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5214C41B25952E5F00B48EB7 /* GBShopUITests.swift */; };
+		5265AFE4259B892A0006910A /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5265AFE3259B892A0006910A /* GoogleService-Info.plist */; };
 		527F5D50257D1D3F0043A6F8 /* UserReviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527F5D4F257D1D3F0043A6F8 /* UserReviews.swift */; };
 		527F5D56257D46710043A6F8 /* ReviewRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527F5D55257D46710043A6F8 /* ReviewRequest.swift */; };
 		527F5D5A257D46C10043A6F8 /* ManageReviews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527F5D59257D46C10043A6F8 /* ManageReviews.swift */; };
@@ -50,6 +54,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		5214C41E25952E5F00B48EB7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 52CD909E2566FA66002C997D /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 52CD90A52566FA66002C997D;
+			remoteInfo = GBShop;
+		};
 		528880E42573FEE40081C195 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 52CD909E2566FA66002C997D /* Project object */;
@@ -75,6 +86,12 @@
 		5214C3EB2591170700B48EB7 /* ReviewsTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReviewsTableViewController.xib; sourceTree = "<group>"; };
 		5214C3F02591191400B48EB7 /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
 		5214C3F42591192800B48EB7 /* Review.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Review.swift; sourceTree = "<group>"; };
+		5214C40A2595138D00B48EB7 /* BasketViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketViewController.swift; sourceTree = "<group>"; };
+		5214C40B2595138D00B48EB7 /* BasketViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = BasketViewController.xib; sourceTree = "<group>"; };
+		5214C41925952E5F00B48EB7 /* GBShopUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GBShopUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5214C41B25952E5F00B48EB7 /* GBShopUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GBShopUITests.swift; sourceTree = "<group>"; };
+		5214C41D25952E5F00B48EB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5265AFE3259B892A0006910A /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		527F5D4F257D1D3F0043A6F8 /* UserReviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserReviews.swift; sourceTree = "<group>"; };
 		527F5D55257D46710043A6F8 /* ReviewRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewRequest.swift; sourceTree = "<group>"; };
 		527F5D59257D46C10043A6F8 /* ManageReviews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ManageReviews.swift; sourceTree = "<group>"; };
@@ -113,6 +130,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		5214C41625952E5F00B48EB7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		528880DC2573FEE40081C195 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -141,8 +165,18 @@
 				5214C3D5258BEC0200B48EB7 /* ProductsTableViewCell.xib */,
 				5214C3E32590FE3800B48EB7 /* ProductViewController.xib */,
 				5214C3EB2591170700B48EB7 /* ReviewsTableViewController.xib */,
+				5214C40B2595138D00B48EB7 /* BasketViewController.xib */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		5214C41A25952E5F00B48EB7 /* GBShopUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5214C41B25952E5F00B48EB7 /* GBShopUITests.swift */,
+				5214C41D25952E5F00B48EB7 /* Info.plist */,
+			);
+			path = GBShopUITests;
 			sourceTree = "<group>";
 		};
 		527F5D6E2584A0C60043A6F8 /* Controllers */ = {
@@ -156,6 +190,7 @@
 				5214C3D4258BEC0200B48EB7 /* ProductsTableViewCell.swift */,
 				5214C3E22590FE3800B48EB7 /* ProductViewController.swift */,
 				5214C3EA2591170700B48EB7 /* ReviewsTableViewController.swift */,
+				5214C40A2595138D00B48EB7 /* BasketViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -210,6 +245,7 @@
 			children = (
 				52CD90A82566FA66002C997D /* GBShop */,
 				528880E02573FEE40081C195 /* GBShopTests */,
+				5214C41A25952E5F00B48EB7 /* GBShopUITests */,
 				52CD90A72566FA66002C997D /* Products */,
 				F46715926B38CAAFCDEA3771 /* Pods */,
 				BEE1B1E3533BBCAE615AA0F3 /* Frameworks */,
@@ -221,6 +257,7 @@
 			children = (
 				52CD90A62566FA66002C997D /* GBShop.app */,
 				528880DF2573FEE40081C195 /* GBShopTests.xctest */,
+				5214C41925952E5F00B48EB7 /* GBShopUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -262,6 +299,7 @@
 			children = (
 				52CD90B42566FA68002C997D /* LaunchScreen.storyboard */,
 				52CD90B72566FA68002C997D /* Info.plist */,
+				5265AFE3259B892A0006910A /* GoogleService-Info.plist */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -327,6 +365,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		5214C41825952E5F00B48EB7 /* GBShopUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5214C42025952E5F00B48EB7 /* Build configuration list for PBXNativeTarget "GBShopUITests" */;
+			buildPhases = (
+				5214C41525952E5F00B48EB7 /* Sources */,
+				5214C41625952E5F00B48EB7 /* Frameworks */,
+				5214C41725952E5F00B48EB7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5214C41F25952E5F00B48EB7 /* PBXTargetDependency */,
+			);
+			name = GBShopUITests;
+			productName = GBShopUITests;
+			productReference = 5214C41925952E5F00B48EB7 /* GBShopUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		528880DE2573FEE40081C195 /* GBShopTests */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 528880E82573FEE40081C195 /* Build configuration list for PBXNativeTarget "GBShopTests" */;
@@ -356,6 +412,7 @@
 				52CD90A32566FA66002C997D /* Frameworks */,
 				52CD90A42566FA66002C997D /* Resources */,
 				B95291D9F1A283884A4333BD /* [CP] Embed Pods Frameworks */,
+				5265AFC7259B86DE0006910A /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -375,6 +432,10 @@
 				LastSwiftUpdateCheck = 1230;
 				LastUpgradeCheck = 1230;
 				TargetAttributes = {
+					5214C41825952E5F00B48EB7 = {
+						CreatedOnToolsVersion = 12.3;
+						TestTargetID = 52CD90A52566FA66002C997D;
+					};
 					528880DE2573FEE40081C195 = {
 						CreatedOnToolsVersion = 12.3;
 						TestTargetID = 52CD90A52566FA66002C997D;
@@ -399,11 +460,19 @@
 			targets = (
 				52CD90A52566FA66002C997D /* GBShop */,
 				528880DE2573FEE40081C195 /* GBShopTests */,
+				5214C41825952E5F00B48EB7 /* GBShopUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		5214C41725952E5F00B48EB7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		528880DD2573FEE40081C195 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -422,6 +491,8 @@
 				5214C3C3258B496800B48EB7 /* ProductsListViewController.xib in Resources */,
 				52CD90B32566FA68002C997D /* Assets.xcassets in Resources */,
 				527F5D782584F6E00043A6F8 /* ProfileViewController.xib in Resources */,
+				5265AFE4259B892A0006910A /* GoogleService-Info.plist in Resources */,
+				5214C40D2595138D00B48EB7 /* BasketViewController.xib in Resources */,
 				527F5D722584A1030043A6F8 /* LoginViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -450,6 +521,25 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		5265AFC7259B86DE0006910A /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}",
+				"$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)",
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n";
 		};
 		6A297ECB2FC90D500E97D83F /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -510,6 +600,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		5214C41525952E5F00B48EB7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5214C41C25952E5F00B48EB7 /* GBShopUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		528880DB2573FEE40081C195 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -526,6 +624,7 @@
 			files = (
 				527F5D5A257D46C10043A6F8 /* ManageReviews.swift in Sources */,
 				5214C3D6258BEC0200B48EB7 /* ProductsTableViewCell.swift in Sources */,
+				5214C40C2595138D00B48EB7 /* BasketViewController.swift in Sources */,
 				527F5D64257D6E2A0043A6F8 /* Basket.swift in Sources */,
 				527F5D50257D1D3F0043A6F8 /* UserReviews.swift in Sources */,
 				5214C3C7258BD3C200B48EB7 /* Products.swift in Sources */,
@@ -557,6 +656,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		5214C41F25952E5F00B48EB7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 52CD90A52566FA66002C997D /* GBShop */;
+			targetProxy = 5214C41E25952E5F00B48EB7 /* PBXContainerItemProxy */;
+		};
 		528880E52573FEE40081C195 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 52CD90A52566FA66002C997D /* GBShop */;
@@ -576,6 +680,44 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		5214C42125952E5F00B48EB7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A9AML55U6D;
+				INFOPLIST_FILE = GBShopUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.likhachev.GBShopUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GBShop;
+			};
+			name = Debug;
+		};
+		5214C42225952E5F00B48EB7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = A9AML55U6D;
+				INFOPLIST_FILE = GBShopUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.likhachev.GBShopUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GBShop;
+			};
+			name = Release;
+		};
 		528880E62573FEE40081C195 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CE944B3DC7822AB7395497E0 /* Pods-GBShop-GBShopTests.debug.xcconfig */;
@@ -746,6 +888,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = A9AML55U6D;
 				INFOPLIST_FILE = "GBShop/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -766,6 +909,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = A9AML55U6D;
 				INFOPLIST_FILE = "GBShop/Supporting Files/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -782,6 +926,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		5214C42025952E5F00B48EB7 /* Build configuration list for PBXNativeTarget "GBShopUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5214C42125952E5F00B48EB7 /* Debug */,
+				5214C42225952E5F00B48EB7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		528880E82573FEE40081C195 /* Build configuration list for PBXNativeTarget "GBShopTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

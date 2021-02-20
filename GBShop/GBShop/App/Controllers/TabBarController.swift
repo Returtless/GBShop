@@ -23,13 +23,17 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate {
         tabOne.tabBarItem = tabOneBarItem
         
         
-        let tabTwo = ProfileViewController()
-        let tabTwoBarItem2 = UITabBarItem(title: "Профиль", image: UIImage(systemName: "person.circle"), selectedImage: UIImage(systemName: "person.circle.fill"))
+        let tabTwo = BasketViewController()
+        let tabTwoBarItem2 = UITabBarItem(title: "Корзина", image: UIImage(systemName: "cart"), selectedImage: UIImage(systemName: "cart.fill"))
         
         tabTwo.tabBarItem = tabTwoBarItem2
         
+        let tabThree = ProfileViewController()
+        let tabThreeBarItem3 = UITabBarItem(title: "Профиль", image: UIImage(systemName: "person.circle"), selectedImage: UIImage(systemName: "person.circle.fill"))
         
-        self.viewControllers = [tabOne, tabTwo]
+        tabThree.tabBarItem = tabThreeBarItem3
+        
+        self.viewControllers = [tabOne, tabTwo, tabThree]
     }
     
 }

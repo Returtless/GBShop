@@ -30,6 +30,8 @@ protocol BasketRequestFactory {
     func deleteFromBasket(productId: Int, completionHandler: @escaping (AFDataResponse<ProductResult>) -> Void)
     
     func payBasket(userId: Int, completionHandler: @escaping (AFDataResponse<UserBasketResult>) -> Void)
+    
+    func getBasket(userId: Int, completionHandler: @escaping (AFDataResponse<UserBasketResult>) -> Void)
 }
 
 protocol ProductsRequestFactory {
